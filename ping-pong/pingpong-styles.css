@@ -1,0 +1,9 @@
+h1,p{
+	text-align: center;
+}
+
+body{
+	border: 2px solid green;
+	padding: 6px;
+	margin: 14px;
+}
