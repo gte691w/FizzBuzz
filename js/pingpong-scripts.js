@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#test-button").click(function(event){
 		var num = parseInt(prompt("Please Enter Your Number"));
-		if(num){
+		if(num && num % 1 != 0){
 			var arr = [];
 			var i = 0;
 			for(index=1; index<=num; index+=1){
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		}
 
 		else{
-			alert("Please Enter A Number!")
+			alert("Please Enter An Integer!")
 		}
 
 
