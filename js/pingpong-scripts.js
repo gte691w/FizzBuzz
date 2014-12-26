@@ -1,10 +1,30 @@
+var verifyNumber = function(number){
+	parseInt(number);
+	if(isNaN(number)) {
+		return false
+	}
+	else if( number%1 !=0) {
+		return false;
+	}
+
+	else{
+		return true;
+	}
+}
+
+
+
+
 $(document).ready(function(){
 	$("#test-button").click(function(event){
-		var num = parseInt(prompt("Please Enter Your Number"));
-		if(num && num % 1 != 0){
+		var input = prompt("Please Enter Your Number");
+		var num = verifyNumber(input);
+		if (num){
+			var numero = parseInt(input)
 			var arr = [];
 			var i = 0;
-			for(index=1; index<=num; index+=1){
+			var index;
+			for(index=1; index<=numero; index+=1){
 			  arr[i] = index;
 			  i+=1;
 			}
