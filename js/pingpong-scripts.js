@@ -17,6 +17,7 @@ var verifyNumber = function(number){
 
 $(document).ready(function(){
 	$("#test-button").click(function(event){
+		$('#output').children("li").remove();
 		var input = prompt("Please Enter Your Number");
 		var num = verifyNumber(input);
 		if (num){
@@ -54,7 +55,7 @@ $(document).ready(function(){
 					$("div #output").append("<li>"+number+"</li>");
 					
 				}
-
+				event.preventDefault();
 			});
 		}
 
@@ -63,14 +64,14 @@ $(document).ready(function(){
 		}
 
 
-		event.preventDefault();
+		
 
 
 
 	});
 
 	$("#clear-button").click(function(){
-		$('#output').find("li").remove();
+		$('#output').find("li").fadeOut(300, function() { $(this).remove().slideUp() });
 
 	});
 });
