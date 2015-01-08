@@ -35,24 +35,27 @@ $(document).ready(function(){
 				if(number%3===0 && number%5===0){
 
 					var unique1 = "Fizz-Buzz";
-					$("div #output").append("<li>"+unique1+"</li>");
+					$('<li>'+unique1+'</li>').css('color','orange').appendTo("div #output").hide().slideDown();
+					/*$("div #output").append("<li>"+unique1+"</li>")*/
 				
 				}
 
 				else if(number%3===0){
 					var unique2 = "Fizz";
-					$("div #output").append("<li>"+unique2+"</li>");
+					$('<li>'+unique2+'</li>').css('color','red').appendTo("div #output").hide().slideDown();
+					/*$("div #output").append("<li>"+unique2+"</li>").css("color","red");*/
 					
 				}
 
 				else if(number%5===0){
 					var unique3 = "Buzz";
-					$("div #output").append("<li>"+unique3+"</li>");
+					$('<li>'+unique3+'</li>').css('color','blue').appendTo("div #output").hide().slideDown();
 					
 				}
 
 				else {
-					$("div #output").append("<li>"+number+"</li>");
+					$('<li>'+number+'</li>').css('color','#9900CC').appendTo("div #output").hide().slideDown();
+					
 					
 				}
 				event.preventDefault();
